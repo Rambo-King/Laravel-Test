@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\QueryController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +25,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resources([
+    'roles' => RoleController::class,
+    'users' => UserController::class
+]);
