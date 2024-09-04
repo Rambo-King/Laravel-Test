@@ -25,6 +25,10 @@
                         <a class="btn btn-success" href="{{ route('users.index') }}">
                             <i class="bi bi-people"></i> Manage Users</a>
                     @endcanany
+                    @canany(['create-product', 'edit-product', 'delete-product'])
+                        <a class="btn btn-warning" href="{{ route('products.index') }}">
+                            <i class="bi bi-bag"></i> Manage Products</a>
+		    @endcanany
                     <p>&nbsp;</p>
                 </div>
             </div>
