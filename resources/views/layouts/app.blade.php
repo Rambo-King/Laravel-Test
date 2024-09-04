@@ -58,6 +58,9 @@
                             @canany(['create-product', 'edit-product', 'delete-product'])
 				<li><a class="nav-link" href="{{ route('products.index') }}">Manage Products</a></li>
                             @endcanany
+                            @canany(['sql-query', 'export-excel', 'export-json'])
+                                <li><a class="nav-link" href="{{ route('dev.index') }}">SQL Query</a></li>
+                            @endcanany
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}

@@ -29,6 +29,10 @@
                         <a class="btn btn-warning" href="{{ route('products.index') }}">
                             <i class="bi bi-bag"></i> Manage Products</a>
 		    @endcanany
+	            @canany(['sql-query', 'export-excel', 'export-json'])
+                        <a class="btn btn-danger" href="{{ route('dev.index') }}">
+                            <i class="bi bi-search"></i> SQL Query</a>
+                    @endcanany
                     <p>&nbsp;</p>
                 </div>
             </div>
